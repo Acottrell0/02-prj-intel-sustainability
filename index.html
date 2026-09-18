@@ -183,18 +183,6 @@
   </footer>
 
   <script>
-    // Set the page direction from the visitor's browser language.
-    function applyLanguageDirection() {
-      const language = (navigator.language || document.documentElement.lang).toLowerCase();
-      const rtlLanguages = ['ar', 'fa', 'he', 'ku', 'ur'];
-      const isRtl = rtlLanguages.some((rtlLanguage) => language.startsWith(rtlLanguage));
-      document.documentElement.dir = isRtl ? 'rtl' : 'ltr';
-      document.documentElement.lang = isRtl ? language.split('-')[0] : 'en';
-    }
-
-    applyLanguageDirection();
-    window.addEventListener('languagechange', applyLanguageDirection);
-
     document.querySelector('.subscribe-form').addEventListener('submit', (event) => {
       event.preventDefault();
       document.querySelector('#subscription-status').textContent = 'Thank you for subscribing.';
@@ -248,7 +236,5 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-</body>
-</html>
 </body>
 </html>
